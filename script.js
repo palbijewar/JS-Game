@@ -4,7 +4,7 @@ cross = true;
 audio = new Audio('music.mp3');
 audiogo = new Audio('gameover.mp3');
 setTimeout(() => {
-    audio.play()
+    audio.play();
 }, 1000);
 document.onkeydown = function(e){
     console.log("Key code is : ", e.keyCode)
@@ -62,7 +62,6 @@ audio.pause();
             tom.style.animationDuration = newDur + 's';
         }, 500);
       }
- 
 },10);
 
 function updateScore(score) {
