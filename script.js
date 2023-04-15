@@ -41,9 +41,7 @@ setInterval(() => {
       offsetY = Math.abs(jy-ty);
       if(offsetX<73 && offsetY<52) {
         gameOver.innerHTML = "Game Over!"
-        score = score - 1;
         tom.classList.remove('animateTom');
-        
         audiogo.play();
         setTimeout(()=>{
 audiogo.pause();
@@ -59,6 +57,7 @@ audio.pause();
         }, 1000);
       }
 },10);
+
 
 function updateScore(score) {
     scoreCount.innerHTML = "Your Score : " + score;
