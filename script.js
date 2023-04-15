@@ -41,25 +41,22 @@ setInterval(() => {
       offsetY = Math.abs(jy-ty);
       if(offsetX<73 && offsetY<52) {
         gameOver.innerHTML = "Game Over!"
+        score = score - 1;
         tom.classList.remove('animateTom');
+        
         audiogo.play();
         setTimeout(()=>{
 audiogo.pause();
 audio.pause();
         }, 1000);
       }
-      else if (offsetX < 145 && cross) {
-        score += 1;
+      else if (offsetX < 140 && cross) {
+        score+=1;
         updateScore(score);
         cross = false;
         setTimeout(() => {
             cross = true;
         }, 1000);
-        setTimeout(() => {
-            aniDur = parseFloat(window.getComputedStyle(tom, null).getPropertyValue('animation-duration'));
-            newDur = aniDur - 0.1;
-            tom.style.animationDuration = newDur + 's';
-        }, 500);
       }
 },10);
 
