@@ -60,7 +60,6 @@ audio.pause();
             aniDur = parseFloat(window.getComputedStyle(tom, null).getPropertyValue('animation-duration'));
             newDur = aniDur - 0.1;
             tom.style.animationDuration = newDur + 's';
-            console.log('New animation duration: ', newDur)
         }, 500);
       }
  
